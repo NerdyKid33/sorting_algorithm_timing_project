@@ -3,4 +3,4 @@ from sortingAlgorithms import *
 
 x = randomList(10)
 print(x)
-print(bubbleSort(x))
+print(insertionSort(x))

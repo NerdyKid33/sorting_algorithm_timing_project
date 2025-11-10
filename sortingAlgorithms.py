@@ -18,11 +18,9 @@ def insertionSort(curList):
     for i in range(0, n):
         res.append(curList[i])
         curIndex = i 
-        print(curIndex)
-        while (curIndex>0 and curList[curIndex-1]>curList[curIndex]):
+        while (curIndex>0 and res[curIndex-1]>res[curIndex]):
             res[curIndex], res[curIndex-1] = res[curIndex-1], res[curIndex]
             curIndex-=1
 
     return res
 
-print(insertionSort([3, 2, 1]))
