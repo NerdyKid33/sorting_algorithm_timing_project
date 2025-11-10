@@ -24,3 +24,34 @@ def insertionSort(curList):
 
     return res
 
+def merge(arr1, arr2, n, m):
+    i = 0 
+    j = 0 
+    res = []
+    while (i<n and j<m):
+        if (arr1[i]<arr2[j]):
+            res.append(arr1[i])
+            i+=1
+        else:
+            res.append(arr2[j])
+            j+=1 
+
+    for q in range(i, n):
+        res.append(arr1[q])
+
+    for q in range(j, m):
+        res.append(arr2[q])
+
+    return res
+
+def mergeSort(arr, n):
+    if (n==1):
+        return arr 
+    
+    x1 = mergeSort(arr[:n//2], n//2)
+    x2 = mergeSort(arr[n//2:], n - n//2)
+
+    return merge(x1, x2, n//2, n-n//2)
+
+print(mergeSort([5, 4, 3, 2, 1], 5))
+
