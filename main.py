@@ -1,3 +1,6 @@
 from makeLists import *
+from sortingAlgorithms import *
 
-print(mostlySorted(10))
+x = randomList(10)
+print(x)
+print(bubbleSort(x))
