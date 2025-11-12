@@ -1,6 +1,6 @@
 from makeLists import *
 from sortingAlgorithms import *
+from timing import time_function 
+from tableInText import *
 
-x = randomList(10)
-print(x)
-print(insertionSort(x))
+

@@ -1,3 +1,6 @@
+from timing import time_function
+
+@time_function
 def bubbleSort(curList):
     n = len(curList)
     while True:
@@ -12,6 +15,7 @@ def bubbleSort(curList):
 
     return curList
 
+@time_function
 def insertionSort(curList):
     n = len(curList)
     res = []
@@ -44,14 +48,12 @@ def merge(arr1, arr2, n, m):
 
     return res
 
+@time_function
 def mergeSort(arr, n):
-    if (n==1):
+    if (n<=1):
         return arr 
     
-    x1 = mergeSort(arr[:n//2], n//2)
-    x2 = mergeSort(arr[n//2:], n - n//2)
+    _, x1 = mergeSort(arr[:n//2], n//2)
+    _, x2 = mergeSort(arr[n//2:], n - n//2)
 
     return merge(x1, x2, n//2, n-n//2)
-
-print(mergeSort([5, 4, 3, 2, 1], 5))
-
