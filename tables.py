@@ -82,23 +82,27 @@ def merge_data(n, x):
 
     return times
 
-def table_reversed_lists(n, x):
+def table_lists(n, x):
     import matplotlib.pyplot as plt
 
-    if (x==1):
-        plt.title("Sorting time on presorted lists of various lengths ")
-    elif (x==2):
-        plt.title("Sorting time on mostly sorted lists of various lengths")
-    elif (x==3):
-        plt.title("Sorting time on randomly distributed lists of various lengths")
-    else:
-        plt.title("Sorting time on reversed lists of various lengths")
     
-
     plt.xlabel("Length of list")
-    plt.ylabel("Time taken to sort")
+    plt.ylabel("Time taken to sort (s)")
     plt.plot(insertion_data(n, x), label="Insertion Sort")
     plt.plot(bubble_data(n, x), label = "Bubble Sort")
     plt.plot(merge_data(n, x), label = "Merge Sort")
     plt.legend()
+    
+    if (x==1):
+        plt.title("Sorting time on presorted lists of various lengths ")
+        #plt.savefig("presorted.png")
+    elif (x==2):
+        plt.title("Sorting time on mostly sorted lists of various lengths")
+        #plt.savefig("mostlysorted.png")
+    elif (x==3):
+        plt.title("Sorting time on randomly distributed lists of various lengths")
+        #plt.savefig("randomlydistributed.png")
+    else:
+        plt.title("Sorting time on reversed lists of various lengths")
+        #plt.savefig("reversed.png")
     plt.show()
