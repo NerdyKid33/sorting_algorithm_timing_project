@@ -41,7 +41,6 @@ def insertion_data(n, x):
         elif (x==4):
             t, _ =  insertionSort(reversed(i))
             times.append(t)
-    print(times)
     return times
 
 def bubble_data(n, x):
@@ -61,7 +60,6 @@ def bubble_data(n, x):
             t, _ = bubbleSort(reversed(i))
             times.append(t)
 
-    print(times)
     return times
 
 def merge_data(n, x):
@@ -82,7 +80,6 @@ def merge_data(n, x):
             t, _ = mergeSort(reversed(i), i)
             times.append(t)
 
-    print(times)
     return times
 
 def table_reversed_lists(n, x):

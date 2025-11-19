@@ -4,4 +4,4 @@ from timing import time_function
 from tables import *
 import matplotlib.pyplot as plt
 
-table_reversed_lists(500, 2)
+table_reversed_lists(500, 1)
